@@ -1,3 +1,5 @@
+package fuzz
+
 import (
         "github.com/theupdateframework/notary/trustmanager"
         "github.com/theupdateframework/notary/cryptoservice"
