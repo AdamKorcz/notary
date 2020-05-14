@@ -6,6 +6,7 @@ import (
         "github.com/theupdateframework/notary/passphrase"
 )
 
+// Fuzz implements the fuzzer that targets GetPrivateKey
 func Fuzz(data []byte) int {
         cryptos := cryptoservice.NewCryptoService(trustmanager.NewKeyMemoryStore(passphrase.ConstantRetriever("pass")))
         _, _, err := cryptos.GetPrivateKey(string(data))
